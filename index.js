@@ -10,7 +10,7 @@ async function updateMemberCount() {
   client.guilds.cache.forEach(async guild => {
     const channel = guild.channels.cache.get(CHANNEL_ID);
     if (channel) {
-      await channel.setName(`👥 Members: ${guild.memberCount}`);
+      await channel.setName(`Members: ${guild.memberCount}`);
     }
   });
 }
